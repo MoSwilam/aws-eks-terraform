@@ -36,7 +36,7 @@ resource "aws_eks_node_group" "general" {
   node_group_name = "general"
   version         = local.eks_version
   node_role_arn   = aws_iam_role.nodes.arn
-  ami_type       = "AL2_ARM_64"
+  ami_type        = "AL2_ARM_64"
 
   subnet_ids = [
     aws_subnet.public_zone1.id,
